@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Code Banner Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading" style="display: none;">Generating your banner...</div>
+    
+    <div class="container">
+        <header>
+            <h1>Code LinkedIn Banner Generator</h1>
+            <p class="subtitle">Create a professional, code-themed banner for your LinkedIn profile</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="banner-preview">
+                <div class="banner-canvas" id="banner">
+                    <div class="profile-info">
+                        <div class="name" id="preview-name">Jane Developer</div>
+                        <div class="title" id="preview-title">Senior Software Engineer</div>
+                        <div class="tagline" id="preview-tagline">Coding the future, one line at a time</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <h3>Personalization</h3>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="e.g. Jane Developer" value="Jane Developer">
+                    
+                    <label for="title">Your Title</label>
+                    <input type="text" id="title" placeholder="e.g. Senior Software Engineer" value="Senior Software Engineer">
+                    
+                    <label for="tagline">Tagline</label>
+                    <input type="text" id="tagline" placeholder="e.g. Coding the future, one line at a time" value="Coding the future, one line at a time">
+                </div>
+                
+                <div class="control-group">
+                    <h3>Design Theme</h3>
+                    <div class="theme-selector">
+                        <div class="theme-option theme-default active" data-theme="default">
+                            Default
+                        </div>
+                        <div class="theme-option theme-matrix" data-theme="matrix">
+                            Matrix
+                        </div>
+                        <div class="theme-option theme-ocean" data-theme="ocean">
+                            Ocean
+                        </div>
+                        <div class="theme-option theme-sunset" data-theme="sunset">
+                            Sunset
+                        </div>
+                    </div>
+                    
+                    <label for="bgColor">Background Color</label>
+                    <input type="color" id="bgColor" value="#0a0f17">
+                    
+                    <label for="textColor">Text Color</label>
+                    <input type="color" id="textColor" value="#00c9ff">
+                    
+                    <label for="phraseCount">Number of Code Phrases</label>
+                    <div class="slider-container">
+                        <input type="range" id="phraseCount" class="slider" min="5" max="15" value="8">
+                        <span id="phraseCountValue" class="slider-value">8</span>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Export Format</h3>
+                    <div class="format-options">
+                        <div class="format-option active" data-format="png">PNG</div>
+                        <div class="format-option" data-format="jpeg">JPEG</div>
+                    </div>
+                </div>
+                
+                <button id="generateBtn">Generate Banner</button>
+                <button id="downloadBtn" class="download-btn">Download Banner</button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>How to Use This Banner on LinkedIn</h2>
+            <ol>
+                <li>Customize your banner using the options on the right</li>
+                <li>Click "Generate Banner" to update the preview</li>
+                <li>Click "Download Banner" to save the image to your computer</li>
+                <li>Go to your LinkedIn profile and click on the camera icon on your banner</li>
+                <li>Upload the downloaded image and adjust the cropping as needed</li>
+                <li>Save your changes to update your LinkedIn profile banner</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
